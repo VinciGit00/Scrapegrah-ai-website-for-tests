@@ -72,16 +72,18 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <div className="products-grid">
+    <div style={{ fontFamily: 'Arial, sans-serif', textAlign: 'center' }}>
+      <h1 style={{ fontSize: '2rem', marginBottom: '1rem', color: '#333' }}>Our Product Catalog</h1>
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
         {products.map((product) => (
-          <Product
-            key={product.name} // Use a unique key (ideally product ID)
-            imageUrl={product.imageUrl}
-            name={product.name}
-            description={product.description}
-            price={product.price}
-          />
+          <div key={product.name} style={{ margin: '1rem', maxWidth: '300px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', borderRadius: '8px', overflow: 'hidden' }}>
+            <img src={product.imageUrl} alt={product.name} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+            <div style={{ padding: '1rem' }}>
+              <h3 style={{ margin: '0', marginBottom: '0.5rem', color: '#333' }}>{product.name}</h3>
+              <p style={{ margin: '0', color: '#666' }}>{product.description}</p>
+              <p style={{ margin: '0', color: '#333', fontWeight: 'bold' }}>{product.price}</p>
+            </div>
+          </div>
         ))}
       </div>
     </div>
