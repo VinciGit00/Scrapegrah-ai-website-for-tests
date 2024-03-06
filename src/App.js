@@ -7,7 +7,7 @@ function App() {
   useEffect(() => {
     // Logic to fetch products from a database or JSON file would go here
     const sampleProducts = [
-      {
+         {
         imageUrl: 'https://picsum.photos/200/300?random=1',
         name: 'T-shirt with Owl Print',
         description: 'Comfortable cotton t-shirt featuring an owl print.',
@@ -73,6 +73,12 @@ function App() {
 
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', textAlign: 'center' }}>
+      {/* Navbar */}
+      <nav style={{ backgroundColor: '#333', color: '#fff', padding: '1rem 0' }}>
+        <h2>My Store</h2>
+      </nav>
+      
+      {/* Product Catalog */}
       <h1 style={{ fontSize: '2rem', marginBottom: '1rem', color: '#333' }}>Our Product Catalog</h1>
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
         {products.map((product) => (
