@@ -92,6 +92,9 @@ function App() {
           </div>
         ))}
       </div>
+      <footer style={{ marginTop: '2rem', backgroundColor: '#333', color: '#fff', padding: '1rem 0' }}>
+        &copy; {new Date().getFullYear()} My Store
+      </footer>
     </div>
   );
 }
